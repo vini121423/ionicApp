@@ -1,0 +1,77 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content color="modified-gray" class="swiper-no-swiping">
+	<div class="container">
+
+		<div class="login">
+			<img src="../assets/logo/logo2.png" class="img">
+
+			<h5 class="titulo">Login</h5>
+
+			<ion-item>
+				<ion-label position="floating" color="modified-danger"> E-mail </ion-label>
+				<ion-input type="text" #email required></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating" color="modified-danger"> Senha </ion-label>
+				<ion-input type="password" #senha required></ion-input>
+			</ion-item>
+
+			<ion-button type="submit" (click)="login()" color="modified-danger" class="button">
+			Entrar</ion-button>
+			<br>
+			<ion-button type="submit" (click)="login()" color="modified-danger" class="button" size="small">
+			Cadastrar</ion-button>
+
+			<h6 class="titulo">Esqueci minha senha</h6>
+		</div>	
+
+	</div>
+
+        <!--
+
+				<div class="login">
+
+					<img src="../assets/logo/logo2.png" class="img">
+					<h5 class="titulo">Cadastre-se agora mesmo</h5>
+					<ion-item lines="none">
+						<ion-label position="floating" color="modified-danger"> Nome Completo </ion-label>
+						<ion-input type="text" #nome required></ion-input>
+					</ion-item>
+
+					<ion-item>
+						<ion-label position="floating" color="modified-danger"> E-mail </ion-label>
+						<ion-input type="text" #email required></ion-input>
+					</ion-item>
+
+					<ion-item>
+						<ion-label position="floating" color="modified-danger"> Senha </ion-label>
+						<ion-input type="password" #senha required></ion-input>
+					</ion-item>
+
+
+					<div class="checkbox"> 
+						<ion-label color="light"> Tipo de Usuário </ion-label>
+						<ion-list>
+							<ion-radio-group>
+								<ion-item>
+									<ion-label>Comum</ion-label>
+									<ion-radio value="comum"></ion-radio>
+								</ion-item>
+								<ion-item>
+									<ion-label>Mecânico</ion-label>
+									<ion-radio value="mecanico"></ion-radio>
+								</ion-item>
+							</ion-radio-group>
+						</ion-list>
+					</div>
+
+					<ion-button type="submit" (click)="cadastro(email,senha)" color="modified-danger"
+					class="button"> Cadastrar</ion-button>
+				</div>
+			
+			-->
+</ion-content>
