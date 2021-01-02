@@ -1,9 +1,75 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
 </ion-header>
 
 <ion-content>
+	<div class="container">
 
+		<div class="register">
+			<img src="../assets/logo/logo2.png" class="img">
+
+			<h5 class="titulo">Cadastrar</h5>
+            
+            <ion-item>
+				<ion-label position="floating" color="modified-danger"> Nome Completo </ion-label>
+				<ion-input type="text" #email required></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating" color="modified-danger"> E-mail </ion-label>
+				<ion-input type="email" #email required></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating" color="modified-danger"> Senha </ion-label>
+				<ion-input type="password" #senha required></ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-label position="floating" color="modified-danger"> Confirmar Senha </ion-label>
+				<ion-input type="password" #senha required></ion-input>
+			</ion-item>
+
+
+			<ion-item>
+				<ion-label color="modified-danger"> Tipo de Usuário </ion-label>
+				<ion-list>
+					<ion-radio-group>
+						<ion-item>
+							<ion-label>Comum</ion-label>
+							<ion-radio value="comum" color="modified-danger"></ion-radio>
+						</ion-item>
+						<ion-item>
+							<ion-label>Mecânico</ion-label>
+							<ion-radio value="mecanico" color="modified-danger"></ion-radio>
+						</ion-item>
+					</ion-radio-group>
+				</ion-list>
+			</ion-item>
+
+			<ion-item>
+				<ion-label>Cidade</ion-label>
+				<ion-select>
+					<ion-select-option value="brown">Lençóis Paulista</ion-select-option>
+					<ion-select-option value="blonde">Bauru</ion-select-option>
+					<ion-select-option value="black">Piratininga</ion-select-option>
+				</ion-select>
+			</ion-item>
+
+
+			<ion-button type="submit" (click)="login()" color="modified-danger" class="button">
+			<ion-icon name="create-outline"></ion-icon>
+			Cadastrar
+		</ion-button>
+			<br>
+			<ion-button type="submit" routerLink="/login" color="dark" class="button" size="small">
+				<ion-icon name="log-in-outline"></ion-icon>
+			Entrar
+		</ion-button>
+			
+			
+
+
+		</div>	
+
+	</div>
 </ion-content>

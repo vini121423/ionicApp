@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="modified-normal">
+    <ion-buttons>
+      <ion-back-button color="modified-danger">
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="modified-normal">
+  <div class="icon">
+    <ion-icon name="construct" color="modified-danger"></ion-icon>
+    <br>
+      <ion-label color="modified-danger"><b>Preencha o formulário de requisição</b></ion-label>
+  </div> 
+  <ion-item lines="none">
+    <ion-label position="floating" color="modified-danger"> Titulo </ion-label>
+    <ion-input type="text" [(ngModel)]="titulo"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="floating" color="modified-danger"> Descrição </ion-label>
+    <ion-input type="email" [(ngModel)]="descricao"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label color="modified-danger">Importante</ion-label>
+    <ion-checkbox [(ngModel)]="importante" color="danger"></ion-checkbox>
+  </ion-item>
+
+
+  <div class="button-align">
+  <ion-button type="submit" (click)="save()" color="modified-danger" class="button">
+    <ion-icon name="add"></ion-icon>
+    Criar
+  </ion-button>
+</div>
+</ion-content>

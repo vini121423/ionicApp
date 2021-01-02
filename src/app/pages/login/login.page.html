@@ -21,10 +21,14 @@
 			</ion-item>
 
 			<ion-button type="submit" (click)="login()" color="modified-danger" class="button">
-			Entrar</ion-button>
+				<ion-icon name="log-in-outline"></ion-icon>
+				Entrar
+			</ion-button>
 			<br>
-			<ion-button type="submit" (click)="login()" color="modified-danger" class="button" size="small">
-			Cadastrar</ion-button>
+			<ion-button type="submit" routerLink="/register" color="dark" class="button" size="small">
+				<ion-icon name="create-outline"></ion-icon>
+				Cadastrar
+			</ion-button>
 
 			<h6 class="titulo">Esqueci minha senha</h6>
 		</div>	
@@ -74,4 +78,4 @@
 				</div>
 			
 			-->
-</ion-content>
+		</ion-content>

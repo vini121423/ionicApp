@@ -21,8 +21,8 @@
             <ion-fab-button color="modified-danger">
               <ion-icon name="add"></ion-icon>
             </ion-fab-button>
-            <ion-fab-list>
-              <ion-fab-button color="modified-normal">
+            <ion-fab-list side="top">
+              <ion-fab-button color="modified-normal" routerLink="/service">
                 <ion-icon name="add"></ion-icon>
               </ion-fab-button>
               <ion-fab-button color="modified-normal">
@@ -31,21 +31,20 @@
             </ion-fab-list>
     </ion-fab>
 
-  <ion-card>
+  <ion-card *ngFor="let servico of lista">
     <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fboschpereirabarreto.com.br%2Fwp-content%2Fuploads%2F2018%2F09%2Fcarro-quebrado.jpg&f=1&nofb=1" />
     <ion-card-header>
       <ion-card-subtitle>
         <ion-icon name="person"></ion-icon> João Almeida
         <br>
-        <ion-icon name="time"></ion-icon> 31/01/2020
+        <ion-icon name="time"></ion-icon> {{servico.datahora}}
         <br>
         <ion-icon name="business"></ion-icon> São Paulo, SP
       </ion-card-subtitle>
-      <ion-card-title color="modified-danger"><b>Problemas no motor</b></ion-card-title>
+      <ion-card-title color="modified-danger"><b>{{servico.titulo}}</b></ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Bati o carro numa árvore e ficou assim, com marcas de batida, além de ter problemas no motor...
+      {{servico.descricao}}
     </ion-card-content>
   </ion-card>
-
 </ion-content>
