@@ -1,74 +1,112 @@
 <ion-header>
 </ion-header>
 
-<ion-content>
+<ion-content color="modified-normal">
 	<div class="container">
 
 		<div class="register">
 			<img src="../assets/logo/logo2.png" class="img">
 
 			<h5 class="titulo">Cadastrar</h5>
-            
-            <ion-item>
-				<ion-label position="floating" color="modified-danger"> Nome Completo </ion-label>
+
+			<ion-item>
+				<ion-label position="floating" color="modified-danger">
+					<ion-icon name="person-outline" color="modified-danger"></ion-icon>
+					Nome Completo 
+				</ion-label>
 				<ion-input type="text" #email required></ion-input>
 			</ion-item>
 
 			<ion-item>
-				<ion-label position="floating" color="modified-danger"> E-mail </ion-label>
+				<ion-label position="floating" color="modified-danger">
+					<ion-icon name="mail-outline" color="modified-danger"></ion-icon>
+					E-mail 
+				</ion-label>
 				<ion-input type="email" #email required></ion-input>
 			</ion-item>
 
 			<ion-item>
-				<ion-label position="floating" color="modified-danger"> Senha </ion-label>
+				<ion-label position="floating" color="modified-danger">
+					<ion-icon name="lock-closed-outline" color="modified-danger"></ion-icon>
+					Senha 
+				</ion-label>
 				<ion-input type="password" #senha required></ion-input>
 			</ion-item>
 
 			<ion-item>
-				<ion-label position="floating" color="modified-danger"> Confirmar Senha </ion-label>
+				<ion-label position="floating" color="modified-danger"> 
+					<ion-icon name="lock-closed-outline" color="modified-danger"></ion-icon>
+					Confirmar Senha 
+				</ion-label>
 				<ion-input type="password" #senha required></ion-input>
 			</ion-item>
 
 
-			<ion-item>
-				<ion-label color="modified-danger"> Tipo de Usuário </ion-label>
+			<ion-item lines="none">
+				<ion-label color="modified-danger"> 
+					<ion-icon name="people-outline" color="modified-danger"></ion-icon>
+					Tipo de Usuário
+				</ion-label>
 				<ion-list>
 					<ion-radio-group>
-						<ion-item>
-							<ion-label>Comum</ion-label>
-							<ion-radio value="comum" color="modified-danger"></ion-radio>
+						<ion-item lines="none">
+							<ion-label color="modified-danger">Comum</ion-label>
+							<ion-radio value="comum" (click)="alterarUsuarioFalse()" color="modified-danger"></ion-radio>
 						</ion-item>
-						<ion-item>
-							<ion-label>Mecânico</ion-label>
-							<ion-radio value="mecanico" color="modified-danger"></ion-radio>
+						<ion-item lines="none">
+							<ion-label color="modified-danger">Mecânico</ion-label> &nbsp;
+							<ion-radio value="mecanico" (click)="alterarUsuarioTrue()" color="modified-danger"></ion-radio>
 						</ion-item>
 					</ion-radio-group>
 				</ion-list>
 			</ion-item>
 
-			<ion-item>
-				<ion-label>Cidade</ion-label>
-				<ion-select>
-					<ion-select-option value="brown">Lençóis Paulista</ion-select-option>
-					<ion-select-option value="blonde">Bauru</ion-select-option>
-					<ion-select-option value="black">Piratininga</ion-select-option>
+
+
+			<ion-item lines="none">
+				<ion-label color="modified-danger">
+					<ion-icon name="business-outline" color="modified-danger"></ion-icon>
+					Cidade
+				</ion-label>
+				<ion-select [(ngModel)]="cidade" color="modified-danger">
+					<ion-select-option value="lencois paulista">Lençóis Paulista</ion-select-option>
+					<ion-select-option value="bauru">Bauru</ion-select-option>
+					<ion-select-option value="piratininga">Piratininga</ion-select-option>
 				</ion-select>
 			</ion-item>
 
+			<div class="ion-text">
+				<ion-text color="modified-danger" *ngIf="selected">
+					<b>Dados da Oficina</b>
+				</ion-text>
+			</div>
+
+			<ion-item *ngIf="selected">
+				<ion-label position="floating" color="modified-danger">
+					<ion-icon name="home-outline" color="danger"></ion-icon>
+					Nome da Oficina
+				</ion-label>
+				<ion-input type="text"></ion-input>
+			</ion-item>
+
+			<ion-item *ngIf="selected">
+				<ion-label position="floating" color="modified-danger">
+					<ion-icon name="location-outline" color="modified-danger"></ion-icon>
+					Endereço da Oficina
+				</ion-label>
+				<ion-input type="text"></ion-input>
+			</ion-item>
 
 			<ion-button type="submit" (click)="login()" color="modified-danger" class="button">
-			<ion-icon name="create-outline"></ion-icon>
-			Cadastrar
-		</ion-button>
+				<ion-icon name="create-outline"></ion-icon>
+				Cadastrar
+			</ion-button>
 			<br>
 			<ion-button type="submit" routerLink="/login" color="dark" class="button" size="small">
 				<ion-icon name="log-in-outline"></ion-icon>
-			Entrar
-		</ion-button>
+				Entrar
+			</ion-button>
 			
-			
-
-
 		</div>	
 
 	</div>

@@ -38,6 +38,10 @@ export class LoginPage implements OnInit {
   login(){
     this.router.navigate(['/tabs']);
   }
+
+   register(){
+    this.router.navigate(['/register']);
+  }
   
   segmentChanged(event: any) {
     if (event.detail.value === "login") {

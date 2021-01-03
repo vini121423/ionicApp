@@ -1,8 +1,6 @@
-<ion-header>
+<ion-header></ion-header>
 
-</ion-header>
-
-<ion-content color="modified-gray" class="swiper-no-swiping">
+<ion-content color="modified-normal">
 	<div class="container">
 
 		<div class="login">
@@ -11,31 +9,35 @@
 			<h5 class="titulo">Login</h5>
 
 			<ion-item>
-				<ion-label position="floating" color="modified-danger"> E-mail </ion-label>
-				<ion-input type="text" #email required></ion-input>
-			</ion-item>
+				<ion-label position="floating" color="modified-danger"> 
+					<ion-icon name="mail-outline" color="modified-danger"></ion-icon> E-mail </ion-label>
+					<ion-input type="text" required></ion-input>
+				</ion-item>
 
-			<ion-item>
-				<ion-label position="floating" color="modified-danger"> Senha </ion-label>
-				<ion-input type="password" #senha required></ion-input>
-			</ion-item>
+				<ion-item>
+					<ion-label position="floating" color="modified-danger"> <ion-icon name="lock-closed-outline" color="modified-danger"></ion-icon> Senha </ion-label>
+					<ion-input type="password" required></ion-input>
+				</ion-item>
 
-			<ion-button type="submit" (click)="login()" color="modified-danger" class="button">
-				<ion-icon name="log-in-outline"></ion-icon>
-				Entrar
-			</ion-button>
-			<br>
-			<ion-button type="submit" routerLink="/register" color="dark" class="button" size="small">
-				<ion-icon name="create-outline"></ion-icon>
-				Cadastrar
-			</ion-button>
+				<ion-button type="submit" (click)="login()" color="modified-danger" class="button">
+					<ion-icon name="log-in-outline"></ion-icon>
+					Entrar
+				</ion-button>
+				<br>
+				<ion-button type="submit" (click)="register()" color="dark" class="button" size="small">
+					<ion-icon name="create-outline"></ion-icon>
+					Cadastrar
+				</ion-button>
 
-			<h6 class="titulo">Esqueci minha senha</h6>
-		</div>	
+				<div class="title">
+					<h6>Esqueci minha senha</h6>
+				</div>
+			</div>	
 
-	</div>
+		</div>
+	</ion-content>
 
-        <!--
+<!--
 
 				<div class="login">
 
@@ -78,4 +80,3 @@
 				</div>
 			
 			-->
-		</ion-content>
